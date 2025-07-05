@@ -16,4 +16,8 @@ describe("Basic comma-seperated numbers", () => {
 
 });
 
+test("return the sum of any amount of numbers",()=>{
+    expect(add('3,4,5')).toBe(12);
+})
+
 
