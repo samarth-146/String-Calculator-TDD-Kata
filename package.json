@@ -1,0 +1,14 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "This project involves test driven development of string calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Samarth Ganjawala",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
