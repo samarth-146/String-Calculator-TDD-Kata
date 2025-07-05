@@ -28,4 +28,13 @@ test('custom delimeter support at the start of the string',()=>{
     expect(add('//;\n1;2')).toBe(3);
 });
 
+describe('handle the negative numbers',()=>{
+    test('show negative number in the exception message',()=>{
+        expect(()=>add('-1,2,3')).toThrow("Negative numbers are not allowed -1");
+    });
+    test('show all the negative numbers in the exception message',()=>{
+        expect(()=>add('1,-2,-5')).toThrow("Negative numbers are not allowed -2,-5");
+    });
+});
+
 
