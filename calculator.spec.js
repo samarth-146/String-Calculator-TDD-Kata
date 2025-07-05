@@ -1,5 +1,15 @@
-const {add}=require('./calculator');
+const { add } = require('./calculator');
 
-test('return 0 for empty string', () => {
-  expect(add("")).toBe(0);
+describe("Basic comma-seperated numbers", () => {
+
+    test('return 0 for empty string', () => {
+        expect(add("")).toBe(0);
+    });
+
+    test('return the number if only one number is given',()=>{
+        expect(add("7")).toBe(7);
+    });
+
 });
+
+
