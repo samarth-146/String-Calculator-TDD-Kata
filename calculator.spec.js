@@ -10,6 +10,10 @@ describe("Basic comma-seperated numbers", () => {
         expect(add("7")).toBe(7);
     });
 
+    test('return the sum of two numbers',()=>{
+        expect(add('3,4')).toBe(7);
+    });
+
 });
 
 
