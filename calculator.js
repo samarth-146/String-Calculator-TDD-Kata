@@ -1,14 +1,12 @@
-const add=(numbers)=>{
-    if(numbers=="")
+const add = (numbers) => {
+    if (numbers == "")
         return 0;
-    const replacedWithComma=numbers.replace(/\n/g,',');
-    const parts=replacedWithComma.split(",");
-    let sum=0;
-    for(let part of parts)
-    {
-        sum+=Number(part);
-    }
-    return sum;
+
+    return numbers
+        .replace(/\n/g, ',')
+        .split(',')
+        .map(Number)
+        .reduce((sum, num) => sum + num, 0);
 };
 
-module.exports={add};
+module.exports = { add };
