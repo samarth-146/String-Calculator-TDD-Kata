@@ -37,4 +37,6 @@ describe('handle the negative numbers',()=>{
     });
 });
 
-
+test('number greater than 1000 should be ignored',()=>{
+    expect(add('1,1001,1000')).toBe(1001);
+});
