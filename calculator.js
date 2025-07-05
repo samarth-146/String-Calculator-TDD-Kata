@@ -17,7 +17,12 @@ const add = (numbers) => {
     if (negatives.length > 0) {
         throw new Error(`Negative numbers are not allowed ${negatives.join(',')}`);
     }
-    return array.reduce((sum, num) => sum + num, 0);
+    return array.reduce((sum, num) => {
+        if(num<=1000){
+            return sum + num
+        }
+        return sum;
+    },0);
 };
 
 module.exports = { add };
