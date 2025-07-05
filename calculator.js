@@ -1,7 +1,8 @@
 const add=(numbers)=>{
     if(numbers=="")
         return 0;
-    const parts=numbers.split(",");
+    const replacedWithComma=numbers.replace(/\n/g,',');
+    const parts=replacedWithComma.split(",");
     let sum=0;
     for(let part of parts)
     {
