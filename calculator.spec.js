@@ -37,6 +37,10 @@ describe('handle the negative numbers',()=>{
     });
 });
 
+test('handle exclaimation mark',()=>{
+    expect(add('//!\n1!2')).toBe(2);
+});
+
 test('number greater than 1000 should be ignored',()=>{
     expect(add('1,1001,1000')).toBe(1001);
 });

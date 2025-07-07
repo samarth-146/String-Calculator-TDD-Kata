@@ -9,7 +9,16 @@ const add = (numbers) => {
         numbers = number;
     }
 
+    
     let array = numbers.replace(/\n/g, delimeter).split(delimeter).map(Number);
+
+
+    if(delimeter==='!')
+    {
+        return array.reduce((mul,num)=>{
+            return num*mul;
+        },1);
+    }
 
     let negatives = array.filter((n) => {
         return n < 0;
@@ -24,5 +33,6 @@ const add = (numbers) => {
         return sum;
     },0);
 };
+console.log(add('//!\n1!2'));
 
 module.exports = { add };
